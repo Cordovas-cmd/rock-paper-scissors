@@ -29,3 +29,31 @@ function generateComputerChoice() {
     computerChoiceDisplay.innerHTML = computerChoice
 
 }
+
+function getResult() {
+    // Setting up the win/lose conditions
+    if(computerChoice === userChoice) {
+        result = "It's a draw!"
+    }
+    if(computerChoice === 'rock' && userChoice === 'paper') {
+        result = "you win!"
+    }
+    if(computerChoice === 'rock' && userChoice === 'scissors') {
+        result = "you lost!"
+    }
+    if(computerChoice === 'paper' && userChoice === 'scissors') {
+        result = "you win!"
+    }
+    if(computerChoice === 'paper' && userChoice === 'rock') {
+        result = "you lost!"
+    }
+    if(computerChoice === 'scissors' && userChoice === 'rock') {
+        result = "you win!"
+    }
+    if(computerChoice === 'scissors' && userChoice === 'paper') {
+        result = "you lose!"
+    }
+   
+    // Sets the inner HTML to display the result based on the above function.
+    resultDisplay.innerHTML = result;
+}
